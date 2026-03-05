@@ -1,53 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Komal Mangnale Portfolio</title>
 
 <style>
 
-body{
-font-family: Arial;
-background:#f2f2f2;
-text-align:center;
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f5f5f5;
+color:#333;
+transition:0.4s;
+text-align:center;
 }
 
 .container{
-background:white;
-margin:20px;
+max-width:900px;
+margin:auto;
 padding:20px;
-border-radius:20px;
 }
 
-img{
-width:150px;
-height:150px;
+.profile{
+margin-top:20px;
+}
+
+.profile img{
+width:160px;
+height:160px;
 border-radius:50%;
 object-fit:cover;
+border:4px solid #4CAF50;
 }
 
 h1{
+margin-top:10px;
 font-size:32px;
 }
 
-.skill-bar{
-width:80%;
-background:#ddd;
-margin:10px auto;
-border-radius:20px;
+h2{
+margin-top:40px;
+margin-bottom:10px;
+}
+
+.about{
+margin:10px 0 20px;
+font-size:16px;
 }
 
 .skill{
+margin:15px 0;
+}
+
+.skill-bar{
+width:100%;
+background:#ddd;
 height:15px;
-background:green;
 border-radius:20px;
+overflow:hidden;
+}
+
+.skill-fill{
+height:100%;
+background:#4CAF50;
+width:0;
+animation:fill 3s forwards;
+}
+
+@keyframes fill{
+from{width:0}
+to{width:var(--width)}
+}
+
+.projects{
+margin-top:20px;
+}
+
+.project-item{
+margin:10px 0;
+font-size:17px;
+}
+
+.buttons{
+margin-top:30px;
 }
 
 .btn{
 display:inline-block;
 padding:12px 25px;
-margin:10px;
+margin:8px;
 border-radius:25px;
 text-decoration:none;
 color:white;
@@ -62,8 +109,31 @@ background:#25D366;
 background:#333;
 }
 
+.github{
+background:#000;
+}
+
 .resume{
 background:#1e73e8;
+}
+
+.dark-btn{
+margin-top:20px;
+padding:8px 20px;
+border:none;
+border-radius:20px;
+background:#555;
+color:white;
+cursor:pointer;
+}
+
+.dark-mode{
+background:#111;
+color:white;
+}
+
+.dark-mode .skill-bar{
+background:#333;
 }
 
 </style>
@@ -74,16 +144,20 @@ background:#1e73e8;
 
 <div class="container">
 
-<img src="IMG20250731223217.jpg">
-
+<div class="profile">
+<img src="IMG20250731223217.jpg" alt="IMG20250731223217.jpg">
 <h1>Komal Mangnale 🚀</h1>
-
 <p>BSc Software Engineering Student | Future Developer</p>
+</div>
+
+<button class="dark-btn" onclick="darkMode()">🌙 Dark Mode</button>
 
 <h2>About Me</h2>
 
-<p>Hello 👋 I am learning Web Development and Programming.  
-I enjoy building websites using HTML, CSS and GitHub.</p>
+<p class="about">
+Hello 👋 I am learning Web Development and Programming.
+I enjoy building websites using HTML, CSS, SQL and C programming.
+</p>
 
 <h2>Education</h2>
 
@@ -91,36 +165,51 @@ I enjoy building websites using HTML, CSS and GitHub.</p>
 
 <h2>My Skills</h2>
 
-<p>HTML</p>
+<div class="skill">
+HTML
 <div class="skill-bar">
-<div class="skill" style="width:90%"></div>
+<div class="skill-fill" style="--width:90%"></div>
+</div>
 </div>
 
-<p>C Programming</p>
+<div class="skill">
+C Programming
 <div class="skill-bar">
-<div class="skill" style="width:75%"></div>
+<div class="skill-fill" style="--width:80%"></div>
+</div>
 </div>
 
-<p>SQL</p>
+<div class="skill">
+SQL
 <div class="skill-bar">
-<div class="skill" style="width:70%"></div>
+<div class="skill-fill" style="--width:75%"></div>
+</div>
 </div>
 
-<p>CSS</p>
+<div class="skill">
+CSS
 <div class="skill-bar">
-<div class="skill" style="width:65%"></div>
+<div class="skill-fill" style="--width:70%"></div>
+</div>
 </div>
 
 <h2>Projects</h2>
 
-<p>✔ Student Record Management System (C)</p>
-<p>✔ Employee Database System (SQL)</p>
-<p>✔ Personal Portfolio Website</p>
+<div class="projects">
+<div class="project-item">✔ Student Record Management System (C)</div>
+<div class="project-item">✔ Employee Database System (SQL)</div>
+<div class="project-item">✔ Personal Portfolio Website</div>
+</div>
 
 <h2>Contact Me</h2>
 
-<a class="btn whatsapp" href="#">WhatsApp</a>
-<a class="btn email" href="#">Email Me</a>
+<div class="buttons">
+
+<a class="btn whatsapp" href="https://wa.me/">WhatsApp</a>
+
+<a class="btn email" href="mailto:your@email.com">Email Me</a>
+
+<a class="btn github" href="https://github.com/">GitHub</a>
 
 <br>
 
@@ -128,5 +217,15 @@ I enjoy building websites using HTML, CSS and GitHub.</p>
 
 </div>
 
+</div>
+
+<script>
+
+function darkMode(){
+document.body.classList.toggle("dark-mode");
+}
+
+</script>
+
 </body>
-</html>
+  </html>
