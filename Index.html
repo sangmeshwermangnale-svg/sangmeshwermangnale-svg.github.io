@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Komal Sangmeshwer Mangnale | Portfolio</title>
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+color:white;
+}
+
+header{
+text-align:center;
+padding:60px 20px;
+}
+
+.profile-img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid #00e5ff;
+object-fit:cover;
+box-shadow:0 0 25px cyan;
+transition:.5s;
+}
+
+.profile-img:hover{
+transform:scale(1.08) rotate(3deg);
+}
+
+h1{
+font-size:40px;
+margin-top:20px;
+}
+
+.tag{
+font-size:20px;
+color:#FFD54F;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:#00c853;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#009624;
+transform:translateY(-4px);
+}
+
+section{
+padding:60px 10%;
+}
+
+.card{
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(12px);
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+box-shadow:0 0 15px rgba(0,0,0,.3);
+}
+
+h2{
+color:#FFD54F;
+margin-bottom:15px;
+}
+
+p{
+line-height:1.8;
+}
+
+.skill{
+background:#333;
+border-radius:25px;
+margin:15px 0;
+overflow:hidden;
+}
+
+.skill div{
+padding:12px;
+background:#00c853;
+font-weight:bold;
+}
+
+.html{width:95%;}
+.css{width:90%;}
+.javascript{width:80%;}
+.c{width:90%;}
+.sql{width:85%;}
+
+.project{
+background:white;
+color:black;
+padding:18px;
+margin:15px 0;
+border-radius:12px;
+font-weight:bold;
+}
+
+.contact a{
+display:block;
+margin:15px 0;
+padding:15px;
+text-decoration:none;
+color:white;
+border-radius:10px;
+text-align:center;
+font-weight:bold;
+}
+
+.github{background:black;}
+.email{background:#444;}
+.phone{background:#1565C0;}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+}
+
+.dark{
+background:#111;
+}
+
+.toggle{
+position:fixed;
+right:20px;
+top:20px;
+padding:10px 20px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<button class="toggle" onclick="darkMode()">🌙 Dark</button>
+
+<header>
+
+<img src="IMG20250731223217.jpg" class="profile-img">
+
+<h1>Komal Sangmeshwer Mangnale</h1>
+
+<p class="tag">
+B.Sc. Software Engineering Student
+</p>
+
+<a href="#about" class="btn">
+View Portfolio
+</a>
+
+  </header>
