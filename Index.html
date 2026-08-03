@@ -188,7 +188,40 @@ target="_blank">
 function darkMode(){
 document.body.classList.toggle("dark");
 }
+const words = [
+  "B.Sc. Software Engineering Student",
+  "Web Developer",
+  "HTML | CSS | JavaScript",
+  "Learning New Technologies"
+];
 
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
+
+function type() {
+  current = words[i];
+
+  if (!isDeleting) {
+    document.getElementById("typing").textContent = current.substring(0, j++);
+    if (j > current.length) {
+      isDeleting = true;
+      setTimeout(type, 1200);
+      return;
+    }
+  } else {
+    document.getElementById("typing").textContent = current.substring(0, j--);
+    if (j < 0) {
+      isDeleting = false;
+      i = (i + 1) % words.length;
+    }
+  }
+
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+
+type();
 </script>
 
 </body>
